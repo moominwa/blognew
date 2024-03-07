@@ -293,7 +293,7 @@ ol, ul {
   padding: 15px 20px;
   background: #f0f1f4;
   font-size: 14px;
-  border-radius: 2px;
+  border-radius: 10px;
 }
 .form-control:focus {
   box-shadow: none;
@@ -363,7 +363,8 @@ blockquote.pull-left {
 }
 
 .btn-primary {
-  background: #dc3545;
+  background: blue;
+  border-radius: 10%;
 }
 .btn-primary:hover {
   background: #d32535;
@@ -1867,8 +1868,10 @@ a.post-category.absolute {
 }
 
 .login {
-  border: 2px solid #eee;
+  border: 2px solid #01030e;
   padding: 40px;
+  background-color: white;
+  border-radius: 5%;
 }
 
 /* Error page
@@ -1932,11 +1935,13 @@ a.post-category.absolute {
 }
 
 .login-signup {
+
   display: flex;
   align-items: center;
   height: 100%;
   width: 100%;
-  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSV5HscxN-oGNLSDcLDx7poX4l1mKra72fv_5lT27OzQ&s');
+
+  /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSV5HscxN-oGNLSDcLDx7poX4l1mKra72fv_5lT27OzQ&s'); */
 }
 
 /* 10. CONTACT
