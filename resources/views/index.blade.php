@@ -120,13 +120,23 @@
                                     <a class="dropdown-item" href="job.html">Career</a>
                                 </div>
                             </li>
-
-
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">ตารางแข่งขัน</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">ผลการแข่งขัน</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">ตารางคะแนน</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">ตรวจสอบรายชื่อ</a>
+                            </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="contact.html">Contact</a>
                             </li>
-
                         </ul>
+
                         <div class="nav-search ml-auto d-none d-lg-block">
                             <span id="search">
                                 <i class="fa fa-search"></i>
