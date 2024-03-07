@@ -1,5 +1,5 @@
   <!-- Main Sidebar Container -->
-<aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color: rgb(103, 130, 199)">
+<aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color: rgb(21, 4, 146)">
     <!-- Brand Logo -->
     <a href="{{route("dashboard")}}" class="brand-link">
       <img src="asset/backend/dist/img/hello.jpg" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
