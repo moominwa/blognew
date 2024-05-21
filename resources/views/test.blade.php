@@ -96,19 +96,21 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('registermenu') }}">สมัคร</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('tarang') }}">ตารางแข่งขัน</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="contact.html">ผลการแข่งขัน</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="contact.html">ตารางคะแนน</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="contact.html">ตรวจสอบรายชื่อ</a>
-                            </li>
 
+
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    สมัคร
+                                </a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="{{ route('tarang') }}">ตารางแข่งขัน</a>
+                                    <a class="dropdown-item" href="{{ route('register') }}">ผลการแข่งขัน</a>
+                                    <a class="dropdown-item" href="{{ route('register') }}">ตารางคะแนน</a>
+                                    <a class="dropdown-item" href="{{ route('register') }}">ตรวจสอบรายชื่อ</a>
+                                </div>
+                            </li>
                         </ul>
 
                     </div>

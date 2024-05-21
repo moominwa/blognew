@@ -87,23 +87,6 @@
                                 </tbody>
                             </table>
 
-                                <div class="col-md-3">
-                                    <label for="f-name">หัวหน้าสาขา</label>
-                                    <input type="text" class="form-control" id="f-name" name="name"placeholder="ชื่อ">
-                                <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone number">
-                                </div>
-                                <div class="col-md-3">
-                                    <label for="f-name">อาจารย์ที่ปรึกษา</label>
-                                    <input type="text" class="form-control" id="f-name" name="name"placeholder="ชื่อ">
-                                <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone number">
-                                </div>
-
-                                <div class="col-md-3">
-                                    <label for="f-name">ผู้จัดการทีม/หัวหน้าทีม</label>
-                                    <input type="text" class="form-control" id="f-name" name="name"placeholder="ชื่อ">
-                                <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone number">
-                                </div>
-
 
                             <div class="col-md-12">
                                 <button class="btn btn-primary" type="submit">Submit</button>
