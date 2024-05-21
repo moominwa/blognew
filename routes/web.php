@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/agri_tech_cup', function () {
+    return view('agri_tech_cup');
+});
+
 Route::get('thk', function () {
     return view('new');
 });
@@ -28,7 +32,7 @@ Route::get('tarang', function () {
     return view('tarang');
 })->name('tarang');
 
-Route::get('registermenu', function () {
+Route::get('/register_menu', function () {
     return view('registermenu');
 })->name('registermenu');
 

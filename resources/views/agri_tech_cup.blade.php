@@ -1,4 +1,4 @@
 @extends('test')
 @section('content')
-@livewire('registermenu')
+@livewire('agri-tech-cup')
 @endsection
