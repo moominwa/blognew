@@ -24,6 +24,15 @@ Route::get('admin', function () {
     return view('new');
 });
 
+Route::get('tarang', function () {
+    return view('tarang');
+})->name('tarang');
+
+Route::get('registermenu', function () {
+    return view('registermenu');
+})->name('registermenu');
+
+
 
 Route::middleware([
     'auth:sanctum',
@@ -45,10 +54,12 @@ Route::middleware([
     })->name('project');
 
 
+
     //ไปสำหรับ ไปที่หน้า project add
     Route::get('/project-add', function () {
         return view('project.add');
     })->name('project-add');
+
 
         //ไปที่หน้าแก้ไข
         Route::get('/project-edit/{id}', function ($id) {

@@ -90,10 +90,6 @@
                                     aria-haspopup="true" aria-expanded="false">
                                     หน้าหลัก
                                 </a>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="index.html">หน้าหลัก 1</a>
-                                    <a class="dropdown-item" href="index-2.html">หน้าหลัก 2</a>
-                                </div>
                             </li>
 
 
@@ -108,7 +104,7 @@
                                 </div>
                             </li>
 
-                            <li class="nav-item dropdown">
+                            {{-- <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
                                     aria-haspopup="true" aria-expanded="false">
                                     About
@@ -119,12 +115,15 @@
                                     <a class="dropdown-item" href="privacy.html">Privacy Policy</a>
                                     <a class="dropdown-item" href="job.html">Career</a>
                                 </div>
+                            </li> --}}
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('registermenu') }}">สมัคร</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="contact.html">ตารางแข่งขัน</a>
+                                <a class="nav-link" href="{{ route('tarang') }}">ตารางแข่งขัน</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="contact.html">ผลการแข่งขัน</a>
+                                <a class="nav-link" href="">ผลการแข่งขัน</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="contact.html">ตารางคะแนน</a>
@@ -137,18 +136,20 @@
                             </li>
                         </ul>
 
-                        <div class="nav-search ml-auto d-none d-lg-block">
+                        {{-- <div class="nav-search ml-auto d-none d-lg-block">
                             <span id="search">
                                 <i class="fa fa-search"></i>
                             </span>
-                        </div>
+                        </div> --}}
                     </div>
                 </nav>
 
             </div>
         </div>
     </div>
-    <form class="site-search" method="get">
+
+
+    -- <form class="site-search" method="get"> //
         <input type="text" id="searchInput" name="site_search" placeholder="Enter Keyword Here..."
             autofocus="">
         <div class="search-close">
@@ -158,7 +159,7 @@
         </div>
     </form>
 </div>
-<section class="featured-posts">
+-- <section class="featured-posts">
     <div class="container">
         <div class="row no-gutters">
             <div class="col-md-6 col-xs-12 col-lg-4">
@@ -207,7 +208,7 @@
 
         </div>
     </div>
-</section>
+</section> --}}
 
 <section class="news-style-four bg-light section-padding">
     <div class="container">
@@ -441,43 +442,7 @@
             </div>
         </div>
     </div>
-</section>
-
-@livewire('index')
-
-
-<div class="py-40"></div>
-
-<footer class="footer footer-main ">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8 col-sm-12 col-lg-6 text-center">
-                {{-- <a href="index.html"><img src="asset/frontend/images/logos/footer-logo.png" alt=""
-                            class="img-fluid"></a> --}}
-                <p class="mt-4">Development of the Agri-Tech Cup football competition management system
-                </p>
-
-                <ul class="list-inline footer-social">
-                    <li class="li list-inline-item"><a href="https://www.facebook.com/themefisher"><i
-                                class="fa fa-facebook"></i></a></li>
-
-                </ul>
-
-                <div class="copyright-text text-center">
-                    <p class="mb-0">© All Copyright Reserved to - <a href="https://themefisher.com/"
-                            target="_blank">Themefisher</a></p>
-                </div>
-            </div>
-
-            <div class="scroll-to-top">
-                <button class="btn btn-primary" title="Back to Top">
-                    <i class="fa fa-angle-up"></i>
-                </button>
-            </div>
-        </div>
-    </div>
-</footer>
-
+</section> --}}
 
 <!-- THEME JAVASCRIPT FILES
 ================================================== -->
