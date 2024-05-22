@@ -17,6 +17,19 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/agri_tech_cup', function () {
+    return view('agri_tech_cup');
+});
+
+Route::get('/open_close', function () {
+    return view('open_close');
+});
+
+Route::get('/addmin', function () {
+    return view('addmin');
+});
+
+
 Route::get('thk', function () {
     return view('new');
 });
@@ -28,7 +41,7 @@ Route::get('tarang', function () {
     return view('tarang');
 })->name('tarang');
 
-Route::get('registermenu', function () {
+Route::get('/register_menu', function () {
     return view('registermenu');
 })->name('registermenu');
 

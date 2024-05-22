@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+@extends('test')
+@section('content')
+@livewire('index')
+@endsection
+=======
 <!DOCTYPE html>
 
 <!--
@@ -443,3 +449,4 @@
 </body>
 
 </html>
+>>>>>>> 36b72b22a502b6ee8b95b96aa4fb9a6767f4fc93

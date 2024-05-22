@@ -1,4 +1,8 @@
 @extends('test')
+<<<<<<< HEAD
+@section('content')
+@livewire('registermenu')
+=======
 @section('contentt')
     <h3 class="text text-center py-2">ใบสมัครเข้าร่วมการแข่งขัน </h3>
     <h3 class="text text-center py-2"> ฟุตบอลคณะเกษตรศาสตร์และเทคโนโลยีต้านภัยยาเสพติด </h3>
@@ -106,4 +110,5 @@
 
         </div>
     </section>
+>>>>>>> 36b72b22a502b6ee8b95b96aa4fb9a6767f4fc93
 @endsection

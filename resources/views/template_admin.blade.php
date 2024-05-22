@@ -25,9 +25,16 @@
     <link rel="stylesheet" href="{{ asset('asset/frontend/plugins/slick-carousel/slick-theme.css') }}">
     <!-- main stylesheet -->
     <link rel="stylesheet" href="{{ asset('asset/frontend/css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('resources\css\template_addmin.css') }}">
-    <!-- Custom CSS for spacing and hover effect -->
 
+    <!-- Custom CSS for spacing and hover effect -->
+    <style>
+        .navbar-nav .nav-item {
+            margin: 0 10px; /* Adjust the margin as needed */
+        }
+        .navbar-nav .nav-link:hover {
+            color: #28BEE3 !important;
+        }
+    </style>
 </head>
 
 <body>
@@ -61,7 +68,6 @@
                                     <a class="dropdown-item" href="{{ route('registermenu') }}">เข้าร่วมแข่งขัน</a>
                                 </div>
                             </li>
-<<<<<<< HEAD
 
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle text-dark" href="#account" role="button"
@@ -101,36 +107,19 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link text-dark" href="{{ route('login') }}">ล็อกอิน</a>
+                                <a class="nav-link text-dark" href="{{ route('login') }}">ล็อกเอาท์</a>
                             </li>
-=======
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('registermenu') }}">สมัคร</a>
-                            </li>
-
-
-
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    สมัคร
-                                </a>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="{{ route('tarang') }}">ตารางแข่งขัน</a>
-                                    <a class="dropdown-item" href="{{ route('register') }}">ผลการแข่งขัน</a>
-                                    <a class="dropdown-item" href="{{ route('register') }}">ตารางคะแนน</a>
-                                    <a class="dropdown-item" href="{{ route('register') }}">ตรวจสอบรายชื่อ</a>
-                                </div>
-                            </li>
->>>>>>> 36b72b22a502b6ee8b95b96aa4fb9a6767f4fc93
                         </ul>
                     </div>
                 </nav>
+
             </div>
         </div>
     </div>
 </div>
 
+
+</div>
 <div class="container py-2">
     @yield('content')
 </div>
