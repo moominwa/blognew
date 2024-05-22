@@ -21,6 +21,15 @@ Route::get('/agri_tech_cup', function () {
     return view('agri_tech_cup');
 });
 
+Route::get('/open_close', function () {
+    return view('open_close');
+});
+
+Route::get('/addmin', function () {
+    return view('addmin');
+});
+
+
 Route::get('thk', function () {
     return view('new');
 });
