@@ -25,16 +25,9 @@
     <link rel="stylesheet" href="{{ asset('asset/frontend/plugins/slick-carousel/slick-theme.css') }}">
     <!-- main stylesheet -->
     <link rel="stylesheet" href="{{ asset('asset/frontend/css/style.css') }}">
-
+    <link rel="stylesheet" href="{{ asset('resources\css\template_addmin.css') }}">
     <!-- Custom CSS for spacing and hover effect -->
-    <style>
-        .navbar-nav .nav-item {
-            margin: 0 10px; /* Adjust the margin as needed */
-        }
-        .navbar-nav .nav-link:hover {
-            color: #28BEE3 !important;
-        }
-    </style>
+
 </head>
 
 <body>
@@ -66,6 +59,9 @@
                                 <div class="dropdown-menu text-dark" id="account">
                                     <a class="dropdown-item" href="{{ route('register') }}">สมาชิก</a>
                                     <a class="dropdown-item" href="{{ route('registermenu') }}">เข้าร่วมแข่งขัน</a>
+                                    <a class="dropdown-item" href="/team_information">ข้อมูลทีม</a>
+                                    <a class="dropdown-item" href="/player_information">ข้อมูลผู้เล่น</a>
+                                    <a class="dropdown-item" href="/star_scorer">ดาวน์ซันโว</a>
                                 </div>
                             </li>
 
@@ -75,7 +71,7 @@
                                     ตาราง
                                 </a>
                                 <div class="dropdown-menu text-dark" id="account">
-                                    <a class="dropdown-item" href="{{ route('tarang') }}">ตารางแข่งขัน</a>
+                                    <a class="dropdown-item" href="/score">ตารางแข่งขัน</a>
                                     <a class="dropdown-item" href="">ผลการแข่งขัน</a>
                                     <a class="dropdown-item" href="">คะแนน</a>
                                 </div>
@@ -87,10 +83,10 @@
                                     ข่าว
                                 </a>
                                 <div class="dropdown-menu text-dark" id="account">
-                                    <a class="dropdown-item" href="{{ route('tarang') }}">ข่าวประชาสัมพันธ์</a>
-                                    <a class="dropdown-item" href="{{ route('tarang') }}">ข่าวการแข่งขัน</a>
-                                    <a class="dropdown-item" href="{{ route('tarang') }}">ข่าวทั่วไป</a>
-                                    <a class="dropdown-item" href="{{ route('tarang') }}">ข่าวการรับสมัคร</a>
+                                    <a class="dropdown-item" href="/score">ข่าวประชาสัมพันธ์</a>
+                                    <a class="dropdown-item" href="/score">ข่าวการแข่งขัน</a>
+                                    <a class="dropdown-item" href="/score">ข่าวทั่วไป</a>
+                                    <a class="dropdown-item" href="/score">ข่าวการรับสมัคร</a>
                                 </div>
                             </li>
 
@@ -100,26 +96,23 @@
                                     ตรวจสอบ
                                 </a>
                                 <div class="dropdown-menu text-dark" id="account">
-                                    <a class="dropdown-item" href="{{ route('tarang') }}">รายชื่อทีมที่สมัคร</a>
-                                    <a class="dropdown-item" href="{{ route('tarang') }}">รายชื่อทีมที่ได้รับการอนุมัติ</a>
-                                    <a class="dropdown-item" href="{{ route('tarang') }}">รายชื่อทีมที่ชำระเงินแล้ว</a>
+                                    <a class="dropdown-item" href="/list_team">รายชื่อทีมที่สมัคร</a>
+                                    <a class="dropdown-item" href="/score">รายชื่อทีมที่ได้รับการอนุมัติ</a>
+                                    <a class="dropdown-item" href="/payment">รายชื่อทีมที่ชำระเงินแล้ว</a>
                                 </div>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link text-dark" href="{{ route('login') }}">ล็อกเอาท์</a>
+                                <a class="nav-link text-dark" href="{{ route('login') }}">ล็อกอิน</a>
                             </li>
                         </ul>
                     </div>
                 </nav>
-
             </div>
         </div>
     </div>
 </div>
 
-
-</div>
 <div class="container py-2">
     @yield('content')
 </div>
