@@ -61,7 +61,6 @@
                                     <a class="dropdown-item" href="{{ route('registermenu') }}">เข้าร่วมแข่งขัน</a>
                                 </div>
                             </li>
-<<<<<<< HEAD
 
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle text-dark" href="#account" role="button"
@@ -103,26 +102,6 @@
                             <li class="nav-item">
                                 <a class="nav-link text-dark" href="{{ route('login') }}">ล็อกอิน</a>
                             </li>
-=======
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('registermenu') }}">สมัคร</a>
-                            </li>
-
-
-
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    สมัคร
-                                </a>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="{{ route('tarang') }}">ตารางแข่งขัน</a>
-                                    <a class="dropdown-item" href="{{ route('register') }}">ผลการแข่งขัน</a>
-                                    <a class="dropdown-item" href="{{ route('register') }}">ตารางคะแนน</a>
-                                    <a class="dropdown-item" href="{{ route('register') }}">ตรวจสอบรายชื่อ</a>
-                                </div>
-                            </li>
->>>>>>> 36b72b22a502b6ee8b95b96aa4fb9a6767f4fc93
                         </ul>
                     </div>
                 </nav>
