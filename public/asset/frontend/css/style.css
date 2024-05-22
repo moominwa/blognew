@@ -579,7 +579,7 @@ a[href^=tel] {
 
 .main-navbar {
   position: relative;
-  border-bottom: 3px solid #dc3545;
+  border-bottom: 3px solid #40dc28;
 }
 .main-navbar .dropdown:hover .dropdown-menu {
   transform: scaleY(1);
@@ -631,10 +631,15 @@ a[href^=tel] {
   border: none;
 }
 .main-navbar .dropdown-menu .dropdown-item:hover {
-  background: #dc3545;
+  background: #14d2d5;
   color: #fff;
 }
-
+.navbar-nav .nav-item {
+    margin: 0 10px; /* Adjust the margin as needed */
+}
+.navbar-nav .nav-link:hover {
+    color: #28BEE3 !important;
+}
 .site-search {
   display: block;
   position: absolute;
