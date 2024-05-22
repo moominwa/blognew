@@ -25,16 +25,9 @@
     <link rel="stylesheet" href="{{ asset('asset/frontend/plugins/slick-carousel/slick-theme.css') }}">
     <!-- main stylesheet -->
     <link rel="stylesheet" href="{{ asset('asset/frontend/css/style.css') }}">
-
+    <link rel="stylesheet" href="{{ asset('resources\css\template_addmin.css') }}">
     <!-- Custom CSS for spacing and hover effect -->
-    <style>
-        .navbar-nav .nav-item {
-            margin: 0 10px; /* Adjust the margin as needed */
-        }
-        .navbar-nav .nav-link:hover {
-            color: #28BEE3 !important;
-        }
-    </style>
+
 </head>
 
 <body>

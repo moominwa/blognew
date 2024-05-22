@@ -118,18 +118,7 @@
     </div>
 </div>
 
-<div class="container">
-  <div class="colum">
-    <div class="col-sm">
-      <a href="">จัดการเปิดปิดรับสมัคร</a>
-    </div>
-    <div class="col-sm">
-        <a href="">จัดการการสมัคร</a>
-    </div>
-    <div class="col-sm">
-        <a href="">จัดการการแข่งขัน</a>
-    </div>
-  </div>
+
 </div>
 <div class="container py-2">
     @yield('content')
