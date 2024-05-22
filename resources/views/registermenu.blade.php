@@ -40,8 +40,6 @@
                                     </select>
                                 </div>
                             </div>
-
-
                             <div class="col-md-3">
                                 <div class="form-group">
                                     <label for="phone">ประเภท</label>
@@ -86,6 +84,11 @@
                                     </tr>
                                 </tbody>
                             </table>
+
+
+
+
+
 
 
                             <div class="col-md-12">
