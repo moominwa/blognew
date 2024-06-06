@@ -63,8 +63,8 @@
                                 </a>
                                 <div class="dropdown-menu text-dark" id="account">
                                     <a class="dropdown-item" href="{{ route('register') }}">สมาชิก</a>
-                                    <a class="dropdown-item" href="{{ route('registermenu') }}">เข้าร่วมแข่งขัน</a>
-                                    <a class="dropdown-item" href="{{ route('registermenu') }}">ชำระเงิน</a>
+                                    <a class="dropdown-item" href="">เข้าร่วมแข่งขัน</a>
+                                    <a class="dropdown-item" href="">ชำระเงิน</a>
                                 </div>
                             </li>
 
@@ -74,7 +74,7 @@
                                     ตาราง
                                 </a>
                                 <div class="dropdown-menu text-dark" id="account">
-                                    <a class="dropdown-item" href="{{ route('tarang') }}">ตารางแข่งขัน</a>
+                                    <a class="dropdown-item" href="">ตารางแข่งขัน</a>
                                     <a class="dropdown-item" href="">ผลการแข่งขัน</a>
                                     <a class="dropdown-item" href="">คะแนน</a>
                                     <a class="dropdown-item" href="">ดาวซัลโว</a>
@@ -87,10 +87,10 @@
                                     ข่าว
                                 </a>
                                 <div class="dropdown-menu text-dark" id="account">
-                                    <a class="dropdown-item" href="{{ route('tarang') }}">ข่าวประชาสัมพันธ์</a>
-                                    <a class="dropdown-item" href="{{ route('tarang') }}">ข่าวการแข่งขัน</a>
-                                    <a class="dropdown-item" href="{{ route('tarang') }}">ข่าวทั่วไป</a>
-                                    <a class="dropdown-item" href="{{ route('tarang') }}">ข่าวการรับสมัคร</a>
+                                    <a class="dropdown-item" href="">ข่าวประชาสัมพันธ์</a>
+                                    <a class="dropdown-item" href="">ข่าวการแข่งขัน</a>
+                                    <a class="dropdown-item" href="">ข่าวทั่วไป</a>
+                                    <a class="dropdown-item" href="">ข่าวการรับสมัคร</a>
                                 </div>
                             </li>
 
@@ -100,9 +100,9 @@
                                     ตรวจสอบ
                                 </a>
                                 <div class="dropdown-menu text-dark" id="account">
-                                    <a class="dropdown-item" href="{{ route('tarang') }}">รายชื่อทีมที่สมัคร</a>
-                                    <a class="dropdown-item" href="{{ route('tarang') }}">รายชื่อทีมที่ได้รับการอนุมัติ</a>
-                                    <a class="dropdown-item" href="{{ route('tarang') }}">รายชื่อทีมที่ชำระเงินแล้ว</a>
+                                    <a class="dropdown-item" href="">รายชื่อทีมที่สมัคร</a>
+                                    <a class="dropdown-item" href="">รายชื่อทีมที่ได้รับการอนุมัติ</a>
+                                    <a class="dropdown-item" href="">รายชื่อทีมที่ชำระเงินแล้ว</a>
                                 </div>
                             </li>
 

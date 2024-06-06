@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('test');
 });
 
 Route::get('/agri_tech_cup', function () {
@@ -49,6 +49,25 @@ Route::get('/addmin', function () {
     return view('addmin');
 });
 
+Route::get('/score_table', function () {
+    return view('score_table');
+});
+Route::get('/payment', function () {
+    return view('payment');
+});
+Route::get('/list_team', function () {
+    return view('list_team');
+});
+Route::get('/team_information', function () {
+    return view('team_information');
+});
+
+Route::get('/player_information', function () {
+    return view('player_information');
+});
+Route::get('/star_scorer', function () {
+    return view('star_scorer');
+});
 
 Route::get('thk', function () {
     return view('new');
@@ -57,10 +76,13 @@ Route::get('admin', function () {
     return view('new');
 });
 
-Route::get('tarang', function () {
-    return view('tarang');
-})->name('tarang');
+Route::get('/score', function () {
+    return view('score');
+});
 
+Route::get('/paymentsure', function () {
+    return view('paymentsure');
+});
 Route::get('/register_menu', function () {
     return view('registermenu');
 })->name('registermenu');

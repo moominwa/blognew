@@ -1,4 +1,5 @@
 @extends('test')
+
 @section('content')
 <h2 class="text text-center py-2">ตารางแข่งขัน</h2>
 <h2 class="text text-center py-2">วันจันทร์ที่ 15 มกราคม 2590</h2>

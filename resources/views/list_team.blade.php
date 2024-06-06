@@ -1,4 +1,4 @@
 @extends('template_admin')
 @section('content')
-@livewire('registermenu')
+@livewire('list-team')
 @endsection
