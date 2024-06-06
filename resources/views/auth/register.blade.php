@@ -34,7 +34,7 @@
         <div class="row align-items-center justify-content-center">
             <div class="col-lg-12">
                 <div class="signup">
-                    <div class="text-center"><a href="index.html"><img src="asset/frontend/images/logos/R.png" alt="" class="img-fluid"></a></div>
+
                     <h3 class="mt-4">Sign Up Here</h3>
                     <p class="mb-5">Join with us and feel better</p>
                     @if ($errors->any())
@@ -49,7 +49,21 @@
 
                     <form method="POST" action="{{ route('register') }}" class="signup-form row">
                         @csrf
-                        <div class="col-md-6">
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label for="l-name">คำนำหน้า</label>
+                                <select id="l-name" name="lastname" class="form-control">
+                                    <option value="" disabled selected>คำนำหน้า</option>
+                                    <option value="เด็กชาย">เด็กชาย</option>
+                                    <option value="เด็กหญิง">เด็กหญิง</option>
+                                    <option value="นาย">นาย</option>
+                                    <option value="นาง">นาง</option>
+                                    <option value="นางสาว">นางสาว</option>
+                                    <!-- Add more options as needed -->
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
                             <div class="form-group">
                                 <label for="f-name">First Name</label>
                                 <input type="text" class="form-control" id="f-name" name="name" placeholder="First name">
@@ -69,8 +83,16 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="departmentt">Department</label>
-                                <input type="text" id="departmentt" name="department" class="form-control" placeholder="Department">
+                                <label for="l-name">สาขา</label>
+                                <select id="l-name" name="lastname" class="form-control">
+                                    <option value="" disabled selected>สาขา</option>
+                                    <option value="เด็กชาย">ประมง</option>
+                                    <option value="เด็กหญิง">สัตว์ศาสตร์</option>
+                                    <option value="นาย">นาย</option>
+                                    <option value="นาง">นาง</option>
+                                    <option value="นางสาว">นางสาว</option>
+                                    <!-- Add more options as needed -->
+                                </select>
                             </div>
                         </div>
 

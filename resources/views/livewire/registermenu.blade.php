@@ -57,6 +57,7 @@
                                 <thead>
                                     <tr>
                                         <th>ลำดับที่</th>
+                                        <th>คำนำหน้า</th>
                                         <th>ชื่อ-นามสกุล</th>
                                         <th>รหัสนักศึกษา</th>
                                         <th>รูปภาพผู้เล่น</th>
@@ -66,15 +67,37 @@
                                 <tbody>
                                     <tr>
                                         <td>1</td>
-                                        <td><input type="text" name="name1" class="form-control"
-                                                placeholder="Enter name"></td>
-                                        <td><input type="text" name="code1" class="form-control"
-                                                placeholder="Enter code"></td>
+                                        <td>
+                                            <select id="l-name" name="lastname" class="form-control">
+                                                <option value="" disabled selected>คำนำหน้า</option>
+                                                <option value="เด็กชาย">เด็กชาย</option>
+                                                <option value="เด็กหญิง">เด็กหญิง</option>
+                                                <option value="นาย">นาย</option>
+                                                <option value="นาง">นาง</option>
+                                                <option value="นางสาว">นางสาว</option>
+                                                <!-- Add more options as needed -->
+                                            </select>
+                                        </div>
+                                    </div></td>
+                                        <td><input type="text" name="name1" class="form-control"placeholder="Enter name"></td>
+                                        <td><input type="text" name="code1" class="form-control"placeholder="Enter code"></td>
                                         <td><input type="file" name="image1" class="form-control-file"></td>
                                         <td><input type="file" name="imagee1" class="form-control-file"></td>
                                     </tr>
                                     <tr>
                                         <td>2</td>
+                                        <td>
+                                            <select id="l-name" name="lastname" class="form-control">
+                                                <option value="" disabled selected>คำนำหน้า</option>
+                                                <option value="เด็กชาย">เด็กชาย</option>
+                                                <option value="เด็กหญิง">เด็กหญิง</option>
+                                                <option value="นาย">นาย</option>
+                                                <option value="นาง">นาง</option>
+                                                <option value="นางสาว">นางสาว</option>
+                                                <!-- Add more options as needed -->
+                                            </select>
+                                        </div>
+                                    </div></td>
                                         <td><input type="text" name="name2" class="form-control"
                                                 placeholder="Enter name"></td>
                                         <td><input type="text" name="code2" class="form-control"
@@ -84,6 +107,18 @@
                                     </tr>
                                     <tr>
                                         <td>3</td>
+                                        <td>
+                                            <select id="l-name" name="lastname" class="form-control">
+                                                <option value="" disabled selected>คำนำหน้า</option>
+                                                <option value="เด็กชาย">เด็กชาย</option>
+                                                <option value="เด็กหญิง">เด็กหญิง</option>
+                                                <option value="นาย">นาย</option>
+                                                <option value="นาง">นาง</option>
+                                                <option value="นางสาว">นางสาว</option>
+                                                <!-- Add more options as needed -->
+                                            </select>
+                                        </div>
+                                    </div></td>
                                         <td><input type="text" name="name3" class="form-control"
                                                 placeholder="Enter name"></td>
                                         <td><input type="text" name="code3" class="form-control"
@@ -93,6 +128,18 @@
                                     </tr>
                                     <tr>
                                         <td>4</td>
+                                        <td>
+                                            <select id="l-name" name="lastname" class="form-control">
+                                                <option value="" disabled selected>คำนำหน้า</option>
+                                                <option value="เด็กชาย">เด็กชาย</option>
+                                                <option value="เด็กหญิง">เด็กหญิง</option>
+                                                <option value="นาย">นาย</option>
+                                                <option value="นาง">นาง</option>
+                                                <option value="นางสาว">นางสาว</option>
+                                                <!-- Add more options as needed -->
+                                            </select>
+                                        </div>
+                                    </div></td>
                                         <td><input type="text" name="name4" class="form-control"
                                                 placeholder="Enter name"></td>
                                         <td><input type="text" name="code4" class="form-control"
@@ -102,6 +149,18 @@
                                     </tr>
                                     <tr>
                                         <td>5</td>
+                                        <td>
+                                            <select id="l-name" name="lastname" class="form-control">
+                                                <option value="" disabled selected>คำนำหน้า</option>
+                                                <option value="เด็กชาย">เด็กชาย</option>
+                                                <option value="เด็กหญิง">เด็กหญิง</option>
+                                                <option value="นาย">นาย</option>
+                                                <option value="นาง">นาง</option>
+                                                <option value="นางสาว">นางสาว</option>
+                                                <!-- Add more options as needed -->
+                                            </select>
+                                        </div>
+                                    </div></td>
                                         <td><input type="text" name="name5" class="form-control"
                                                 placeholder="Enter name"></td>
                                         <td><input type="text" name="code5" class="form-control"
@@ -111,6 +170,18 @@
                                     </tr>
                                     <tr>
                                         <td>6</td>
+                                        <td>
+                                            <select id="l-name" name="lastname" class="form-control">
+                                                <option value="" disabled selected>คำนำหน้า</option>
+                                                <option value="เด็กชาย">เด็กชาย</option>
+                                                <option value="เด็กหญิง">เด็กหญิง</option>
+                                                <option value="นาย">นาย</option>
+                                                <option value="นาง">นาง</option>
+                                                <option value="นางสาว">นางสาว</option>
+                                                <!-- Add more options as needed -->
+                                            </select>
+                                        </div>
+                                    </div></td>
                                         <td><input type="text" name="name6" class="form-control"
                                                 placeholder="Enter name"></td>
                                         <td><input type="text" name="code6" class="form-control"
@@ -120,6 +191,18 @@
                                     </tr>
                                     <tr>
                                         <td>7</td>
+                                        <td>
+                                            <select id="l-name" name="lastname" class="form-control">
+                                                <option value="" disabled selected>คำนำหน้า</option>
+                                                <option value="เด็กชาย">เด็กชาย</option>
+                                                <option value="เด็กหญิง">เด็กหญิง</option>
+                                                <option value="นาย">นาย</option>
+                                                <option value="นาง">นาง</option>
+                                                <option value="นางสาว">นางสาว</option>
+                                                <!-- Add more options as needed -->
+                                            </select>
+                                        </div>
+                                    </div></td>
                                         <td><input type="text" name="name7" class="form-control"
                                                 placeholder="Enter name"></td>
                                         <td><input type="text" name="code7" class="form-control"
@@ -129,6 +212,18 @@
                                     </tr>
                                     <tr>
                                         <td>8</td>
+                                        <td>
+                                            <select id="l-name" name="lastname" class="form-control">
+                                                <option value="" disabled selected>คำนำหน้า</option>
+                                                <option value="เด็กชาย">เด็กชาย</option>
+                                                <option value="เด็กหญิง">เด็กหญิง</option>
+                                                <option value="นาย">นาย</option>
+                                                <option value="นาง">นาง</option>
+                                                <option value="นางสาว">นางสาว</option>
+                                                <!-- Add more options as needed -->
+                                            </select>
+                                        </div>
+                                    </div></td>
                                         <td><input type="text" name="name8" class="form-control"
                                                 placeholder="Enter name"></td>
                                         <td><input type="text" name="code8" class="form-control"
@@ -138,6 +233,18 @@
                                     </tr>
                                     <tr>
                                         <td>9</td>
+                                        <td>
+                                            <select id="l-name" name="lastname" class="form-control">
+                                                <option value="" disabled selected>คำนำหน้า</option>
+                                                <option value="เด็กชาย">เด็กชาย</option>
+                                                <option value="เด็กหญิง">เด็กหญิง</option>
+                                                <option value="นาย">นาย</option>
+                                                <option value="นาง">นาง</option>
+                                                <option value="นางสาว">นางสาว</option>
+                                                <!-- Add more options as needed -->
+                                            </select>
+                                        </div>
+                                    </div></td>
                                         <td><input type="text" name="name9" class="form-control"
                                                 placeholder="Enter name"></td>
                                         <td><input type="text" name="code9" class="form-control"
@@ -147,6 +254,18 @@
                                     </tr>
                                     <tr>
                                         <td>10</td>
+                                        <td>
+                                            <select id="l-name" name="lastname" class="form-control">
+                                                <option value="" disabled selected>คำนำหน้า</option>
+                                                <option value="เด็กชาย">เด็กชาย</option>
+                                                <option value="เด็กหญิง">เด็กหญิง</option>
+                                                <option value="นาย">นาย</option>
+                                                <option value="นาง">นาง</option>
+                                                <option value="นางสาว">นางสาว</option>
+                                                <!-- Add more options as needed -->
+                                            </select>
+                                        </div>
+                                    </div></td>
                                         <td><input type="text" name="name10" class="form-control"
                                                 placeholder="Enter name"></td>
                                         <td><input type="text" name="code10" class="form-control"
@@ -156,6 +275,18 @@
                                     </tr>
                                     <tr>
                                         <td>11</td>
+                                        <td>
+                                            <select id="l-name" name="lastname" class="form-control">
+                                                <option value="" disabled selected>คำนำหน้า</option>
+                                                <option value="เด็กชาย">เด็กชาย</option>
+                                                <option value="เด็กหญิง">เด็กหญิง</option>
+                                                <option value="นาย">นาย</option>
+                                                <option value="นาง">นาง</option>
+                                                <option value="นางสาว">นางสาว</option>
+                                                <!-- Add more options as needed -->
+                                            </select>
+                                        </div>
+                                    </div></td>
                                         <td><input type="text" name="name11" class="form-control"
                                                 placeholder="Enter name"></td>
                                         <td><input type="text" name="code11" class="form-control"
@@ -165,6 +296,18 @@
                                     </tr>
                                     <tr>
                                         <td>12</td>
+                                        <td>
+                                            <select id="l-name" name="lastname" class="form-control">
+                                                <option value="" disabled selected>คำนำหน้า</option>
+                                                <option value="เด็กชาย">เด็กชาย</option>
+                                                <option value="เด็กหญิง">เด็กหญิง</option>
+                                                <option value="นาย">นาย</option>
+                                                <option value="นาง">นาง</option>
+                                                <option value="นางสาว">นางสาว</option>
+                                                <!-- Add more options as needed -->
+                                            </select>
+                                        </div>
+                                    </div></td>
                                         <td><input type="text" name="name12" class="form-control"
                                                 placeholder="Enter name"></td>
                                         <td><input type="text" name="code12" class="form-control"
@@ -174,6 +317,18 @@
                                     </tr>
                                     <tr>
                                         <td>13</td>
+                                        <td>
+                                            <select id="l-name" name="lastname" class="form-control">
+                                                <option value="" disabled selected>คำนำหน้า</option>
+                                                <option value="เด็กชาย">เด็กชาย</option>
+                                                <option value="เด็กหญิง">เด็กหญิง</option>
+                                                <option value="นาย">นาย</option>
+                                                <option value="นาง">นาง</option>
+                                                <option value="นางสาว">นางสาว</option>
+                                                <!-- Add more options as needed -->
+                                            </select>
+                                        </div>
+                                    </div></td>
                                         <td><input type="text" name="name13" class="form-control"
                                                 placeholder="Enter name"></td>
                                         <td><input type="text" name="code13" class="form-control"
@@ -183,6 +338,18 @@
                                     </tr>
                                     <tr>
                                         <td>14</td>
+                                        <td>
+                                            <select id="l-name" name="lastname" class="form-control">
+                                                <option value="" disabled selected>คำนำหน้า</option>
+                                                <option value="เด็กชาย">เด็กชาย</option>
+                                                <option value="เด็กหญิง">เด็กหญิง</option>
+                                                <option value="นาย">นาย</option>
+                                                <option value="นาง">นาง</option>
+                                                <option value="นางสาว">นางสาว</option>
+                                                <!-- Add more options as needed -->
+                                            </select>
+                                        </div>
+                                    </div></td>
                                         <td><input type="text" name="name14" class="form-control"
                                                 placeholder="Enter name"></td>
                                         <td><input type="text" name="code14" class="form-control"
@@ -192,6 +359,18 @@
                                     </tr>
                                     <tr>
                                         <td>15</td>
+                                        <td>
+                                            <select id="l-name" name="lastname" class="form-control">
+                                                <option value="" disabled selected>คำนำหน้า</option>
+                                                <option value="เด็กชาย">เด็กชาย</option>
+                                                <option value="เด็กหญิง">เด็กหญิง</option>
+                                                <option value="นาย">นาย</option>
+                                                <option value="นาง">นาง</option>
+                                                <option value="นางสาว">นางสาว</option>
+                                                <!-- Add more options as needed -->
+                                            </select>
+                                        </div>
+                                    </div></td>
                                         <td><input type="text" name="name15" class="form-control"
                                                 placeholder="Enter name"></td>
                                         <td><input type="text" name="code15" class="form-control"
