@@ -13,12 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+// ต่ายแก้-------------------------------------------------------------------------------------------
 Route::get('/', function () {
     return view('test');
-});
-
-Route::get('/agri_tech_cup', function () {
-    return view('agri_tech_cup');
 });
 
 Route::get('/open_close', function () {
@@ -49,6 +47,14 @@ Route::get('/addmin', function () {
     return view('addmin');
 });
 
+
+
+
+// จบ-------------------------------------------------------------------------------------------
+// ปัง----------------------------------------------------------------------------------------
+Route::get('/register_menu', function () {
+    return view('registermenu');
+})->name('registermenu');
 Route::get('/score_table', function () {
     return view('score_table');
 });
@@ -69,12 +75,7 @@ Route::get('/star_scorer', function () {
     return view('star_scorer');
 });
 
-Route::get('thk', function () {
-    return view('new');
-});
-Route::get('admin', function () {
-    return view('new');
-});
+
 
 Route::get('/score', function () {
     return view('score');
@@ -83,9 +84,8 @@ Route::get('/score', function () {
 Route::get('/paymentsure', function () {
     return view('paymentsure');
 });
-Route::get('/register_menu', function () {
-    return view('registermenu');
-})->name('registermenu');
+
+// จบ-----------------------------------------------------------------------------------------
 
 
 

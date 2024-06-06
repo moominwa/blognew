@@ -579,11 +579,7 @@ a[href^=tel] {
 
 .main-navbar {
   position: relative;
-<<<<<<< HEAD
   border-bottom: 3px solid #28BEE3;
-=======
-  border-bottom: 3px solid #40dc28;
->>>>>>> cc90668c96a98e34d0f839d7bac5441f1cfa5643
 }
 .main-navbar .dropdown:hover .dropdown-menu {
   transform: scaleY(1);
@@ -635,16 +631,10 @@ a[href^=tel] {
   border: none;
 }
 .main-navbar .dropdown-menu .dropdown-item:hover {
-<<<<<<< HEAD
   background: #28BEE3;
   color: #fff;
 }
 
-=======
-  background: #14d2d5;
-  color: #fff;
-}
->>>>>>> cc90668c96a98e34d0f839d7bac5441f1cfa5643
 .navbar-nav .nav-item {
     margin: 0 10px; /* Adjust the margin as needed */
 }
