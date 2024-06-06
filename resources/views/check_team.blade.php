@@ -1,4 +1,4 @@
 @extends('template_admin')
 @section('content')
-@livewire('open-close')
+@livewire('check-team')
 @endsection

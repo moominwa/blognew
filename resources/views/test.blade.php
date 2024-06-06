@@ -25,9 +25,14 @@
     <link rel="stylesheet" href="{{ asset('asset/frontend/plugins/slick-carousel/slick-theme.css') }}">
     <!-- main stylesheet -->
     <link rel="stylesheet" href="{{ asset('asset/frontend/css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('resources\css\template_addmin.css') }}">
+
     <!-- Custom CSS for spacing and hover effect -->
 
+    <style>
+        .navbar-nav .nav-link:hover {
+    color: #28BEE3 !important;
+}
+    </style>
 </head>
 
 <body>
@@ -44,7 +49,7 @@
                     </button>
 
                     <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-                        <ul class="navbar-nav">
+                        <ul class="navbar-nav ">
                             <li class="nav-item">
                                 <a class="nav-link text-dark" href="/" role="button" aria-haspopup="true" aria-expanded="false">
                                     หน้าหลัก
@@ -59,6 +64,7 @@
                                 <div class="dropdown-menu text-dark" id="account">
                                     <a class="dropdown-item" href="{{ route('register') }}">สมาชิก</a>
                                     <a class="dropdown-item" href="{{ route('registermenu') }}">เข้าร่วมแข่งขัน</a>
+                                    <a class="dropdown-item" href="{{ route('registermenu') }}">ชำระเงิน</a>
                                 </div>
                             </li>
 
@@ -71,6 +77,7 @@
                                     <a class="dropdown-item" href="{{ route('tarang') }}">ตารางแข่งขัน</a>
                                     <a class="dropdown-item" href="">ผลการแข่งขัน</a>
                                     <a class="dropdown-item" href="">คะแนน</a>
+                                    <a class="dropdown-item" href="">ดาวซัลโว</a>
                                 </div>
                             </li>
 
