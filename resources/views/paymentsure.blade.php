@@ -1,4 +1,4 @@
-@extends('template_admin')
+@extends('test')
 @section('content')
 @livewire('paymentsure')
 @endsection

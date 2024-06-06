@@ -110,8 +110,6 @@ Route::middleware([
         return view('project');
     })->name('project');
 
-
-
     //ไปสำหรับ ไปที่หน้า project add
     Route::get('/project-add', function () {
         return view('project.add');
