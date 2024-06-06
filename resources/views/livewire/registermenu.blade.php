@@ -403,11 +403,11 @@
                             </div> --}}
 
 
-                            <div class="col-md-12">
+                            <div class="row-md-12">
                                 <button class="btn btn-primary" type="submit">Submit</button>
                             </div>
-                            <br><br>
-                            <div class="col-md-12">
+
+                            <div class="row-md-12">
                                 <button class="btn btn-primary" type="cancel">cancel</button>
                             </div>
                         </form>

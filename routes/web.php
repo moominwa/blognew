@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('template_admin');
+    return view('test');
 });
 
 Route::get('/agri_tech_cup', function () {
@@ -23,7 +23,27 @@ Route::get('/agri_tech_cup', function () {
 
 Route::get('/open_close', function () {
     return view('open_close');
-});
+})->name('open_close');
+
+Route::get('/check_team', function () {
+    return view('check_team');
+})->name('check_team');
+
+Route::get('/check_pay', function () {
+    return view('check_pay');
+})->name('check_pay');
+
+Route::get('/status_team', function () {
+    return view('status_team');
+})->name('status_team');
+
+Route::get('/status_pay', function () {
+    return view('status_pay');
+})->name('status_pay');
+
+Route::get('/check_player', function () {
+    return view('check_player');
+})->name('check_player');
 
 Route::get('/addmin', function () {
     return view('addmin');
@@ -47,13 +67,6 @@ Route::get('/player_information', function () {
 });
 Route::get('/star_scorer', function () {
     return view('star_scorer');
-});
-
-Route::get('thk', function () {
-    return view('new');
-});
-Route::get('admin', function () {
-    return view('new');
 });
 
 Route::get('/score', function () {
@@ -87,8 +100,6 @@ Route::middleware([
     Route::get('/project', function () {
         return view('project');
     })->name('project');
-
-
 
     //ไปสำหรับ ไปที่หน้า project add
     Route::get('/project-add', function () {
