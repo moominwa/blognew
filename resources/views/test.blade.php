@@ -64,7 +64,7 @@
                                 <div class="dropdown-menu text-dark" id="account">
                                     <a class="dropdown-item" href="{{ route('register') }}">สมาชิก</a>
                                     <a class="dropdown-item" href="">เข้าร่วมแข่งขัน</a>
-                                    <a class="dropdown-item" href="">ชำระเงิน</a>
+                                    <a class="dropdown-item" href="/paymentsure">ชำระเงิน</a>
                                 </div>
                             </li>
 
