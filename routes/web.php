@@ -19,9 +19,32 @@ Route::get('/', function () {
     return view('test');
 });
 
+// routes/web.php
+
+
+
 Route::get('/open_close', function () {
     return view('open_close');
 })->name('open_close');
+Route::get('/edit-profile-admin', function () {
+    return view('edit-profile-admin');
+})->name('edit-profile-admin');
+
+Route::get('/football-grouping', function () {
+    return view('football-grouping');
+})->name('football-grouping');
+
+Route::get('/manage-results', function () {
+    return view('manage-results');
+})->name('manage-results');
+
+Route::get('/manage-schedule', function () {
+    return view('manage-schedule');
+})->name('manage-schedule');
+
+Route::get('/manage-statistics', function () {
+    return view('manage-statistics');
+})->name('manage-statistics');
 
 Route::get('/check_team', function () {
     return view('check_team');

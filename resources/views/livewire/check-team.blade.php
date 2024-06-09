@@ -21,6 +21,8 @@
             <th>หัวหน้าทีม</th>
             <th>เบอร์โทร</th>
             <th>ตรวจสอบ</th>
+            <th>อนุมัติ</th>
+            <th>ไม่อนุมัติ</th>
           </tr>
         </thead>
         <tbody>
@@ -35,7 +37,13 @@
             <td>ต่าย</td>
             <td>0959013482</td>
             <td>
-              <a href="{{ route('check_player') }}" class="btn btn-primary">ตรวจสอบข้อมูลทีม</a>
+              <a href="{{ route('check_player') }}" class="btn btn-primary " target="_blank"">ตรวจสอบผู้เล่น</a>
+            </td>
+            <td>
+              <button class="btn btn-success">อนุมัติ</button>
+            </td>
+            <td>
+              <button class="btn btn-danger">ไม่อนุมัติ</button>
             </td>
           </tr>
           <!-- ลำดับที่ 2 -->
@@ -49,7 +57,13 @@
             <td>โต</td>
             <td>0959013483</td>
             <td>
-              <a href="{{ route('check_player') }}" class="btn btn-primary">ตรวจสอบข้อมูลทีม</a>
+              <a href="{{ route('check_player') }}" class="btn btn-primary " target="_blank"">ตรวจสอบผู้เล่น</a>
+            </td>
+            <td>
+              <button class="btn btn-success">อนุมัติ</button>
+            </td>
+            <td>
+              <button class="btn btn-danger">ไม่อนุมัติ</button>
             </td>
           </tr>
           <!-- ลำดับที่ 3 -->
@@ -63,7 +77,13 @@
             <td>นก</td>
             <td>0959013484</td>
             <td>
-              <a href="{{ route('check_player') }}" class="btn btn-primary">ตรวจสอบข้อมูลทีม</a>
+              <a href="{{ route('check_player') }}" class="btn btn-primary " target="_blank"">ตรวจสอบผู้เล่น</a>
+            </td>
+            <td>
+              <button class="btn btn-success">อนุมัติ</button>
+            </td>
+            <td>
+              <button class="btn btn-danger">ไม่อนุมัติ</button>
             </td>
           </tr>
           <!-- ลำดับที่ 4 -->
@@ -77,7 +97,13 @@
             <td>งู</td>
             <td>0959013485</td>
             <td>
-              <a href="{{ route('check_player') }}" class="btn btn-primary">ตรวจสอบข้อมูลทีม</a>
+              <a href="{{ route('check_player') }}" class="btn btn-primary " target="_blank"">ตรวจสอบผู้เล่น</a>
+            </td>
+            <td>
+              <button class="btn btn-success">อนุมัติ</button>
+            </td>
+            <td>
+              <button class="btn btn-danger">ไม่อนุมัติ</button>
             </td>
           </tr>
           <!-- ลำดับที่ 5 -->
@@ -91,7 +117,13 @@
             <td>เสือ</td>
             <td>0959013486</td>
             <td>
-              <a href="{{ route('check_player') }}" class="btn btn-primary">ตรวจสอบข้อมูลทีม</a>
+              <a href="{{ route('check_player') }}" class="btn btn-primary " target="_blank"">ตรวจสอบผู้เล่น</a>
+            </td>
+            <td>
+              <button class="btn btn-success">อนุมัติ</button>
+            </td>
+            <td>
+              <button class="btn btn-danger">ไม่อนุมัติ</button>
             </td>
           </tr>
           <!-- ลำดับที่ 6 -->
@@ -105,7 +137,13 @@
             <td>เข้</td>
             <td>0959013487</td>
             <td>
-              <a href="{{ route('check_player') }}" class="btn btn-primary">ตรวจสอบข้อมูลทีม</a>
+              <a href="{{ route('check_player') }}" class="btn btn-primary " target="_blank"">ตรวจสอบผู้เล่น</a>
+            </td>
+            <td>
+              <button class="btn btn-success">อนุมัติ</button>
+            </td>
+            <td>
+              <button class="btn btn-danger">ไม่อนุมัติ</button>
             </td>
           </tr>
           <!-- ลำดับที่ 7 -->
@@ -119,7 +157,13 @@
             <td>ช้าง</td>
             <td>0959013488</td>
             <td>
-              <a href="{{ route('check_player') }}" class="btn btn-primary">ตรวจสอบข้อมูลทีม</a>
+              <a href="{{ route('check_player') }}" class="btn btn-primary " target="_blank"">ตรวจสอบผู้เล่น</a>
+            </td>
+            <td>
+              <button class="btn btn-success">อนุมัติ</button>
+            </td>
+            <td>
+              <button class="btn btn-danger">ไม่อนุมัติ</button>
             </td>
           </tr>
           <!-- ลำดับที่ 8 -->
@@ -133,7 +177,13 @@
             <td>ม้า</td>
             <td>0959013489</td>
             <td>
-              <a href="{{ route('check_player') }}" class="btn btn-primary">ตรวจสอบข้อมูลทีม</a>
+              <a href="{{ route('check_player') }}" class="btn btn-primary " target="_blank" " >ตรวจสอบผู้เล่น</a>
+            </td>
+            <td>
+              <button class="btn btn-success">อนุมัติ</button>
+            </td>
+            <td>
+              <button class="btn btn-danger">ไม่อนุมัติ</button>
             </td>
           </tr>
           <!-- ลำดับที่ 9 -->
@@ -147,7 +197,13 @@
             <td>ปลาวาฬ</td>
             <td>0959013490</td>
             <td>
-              <a href="{{ route('check_player') }}" class="btn btn-primary">ตรวจสอบข้อมูลทีม</a>
+              <a href="{{ route('check_player') }}" class="btn btn-primary " target="_blank"">ตรวจสอบผู้เล่น</a>
+            </td>
+            <td>
+              <button class="btn btn-success">อนุมัติ</button>
+            </td>
+            <td>
+              <button class="btn btn-danger">ไม่อนุมัติ</button>
             </td>
           </tr>
           <!-- ลำดับที่ 10 -->
@@ -161,12 +217,29 @@
             <td>สุนัข</td>
             <td>0959013491</td>
             <td>
-              <a href="{{ route('check_player') }}" class="btn btn-primary">ตรวจสอบข้อมูลทีม</a>
+              <a href="{{ route('check_player') }}" class="btn btn-primary " target="_blank"">ตรวจสอบผู้เล่น</a>
             </td>
+            <td>
+                <button class="btn btn-success" onclick="approve(this.parentNode.parentNode)">อนุมัติ</button>
+              </td>
+              <td>
+                <button class="btn btn-danger" onclick="disapprove(this.parentNode.parentNode)">ไม่อนุมัติ</button>
+              </td>
+
           </tr>
         </tbody>
       </table>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  </body>
+    <script>
+        function approve(row) {
+          row.style.backgroundColor = "#d4edda"; // สีเขียวสำหรับการอนุมัติ
+        }
+
+        function disapprove(row) {
+          row.style.backgroundColor = "#f8d7da"; // สีแดงสำหรับไม่อนุมัติ
+        }
+      </script>
+
+</body>
 </html>
