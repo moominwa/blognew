@@ -1,421 +1,392 @@
-<div>
-    {{-- Be like water. --}}
-    <h3 class="text text-center py-2">ใบสมัครเข้าร่วมการแข่งขัน </h3>
-    <h3 class="text text-center py-2"> ฟุตบอลคณะเกษตรศาสตร์และเทคโนโลยีต้านภัยยาเสพติด </h3>
-    <h3 class="text text-center py-2">ครั้งที่ 17 “17th Agri-Tech CUP Anti Drugs” </h3>
-    <section class="login-signup section-padding">
-        <div class="container">
-            <div class="row align-items-center justify-content-center">
-                <div class="col-lg-12">
-                    <div class="signup">
+<!DOCTYPE html>
+<html lang="en">
 
-                        @if ($errors->any())
-                            <div class="alert alert-danger">
-                                <ui>
-                                    @foreach ($errors->all() as $error)
-                                        <li> {{ $error }}</li>
-                                    @endforeach
-                                </ui>
-                            </div>
-                        @endif
-                        <form method="POST" action="{{ route('register') }}" class="signup-form row">
-                            @csrf
-                            <div class="col-md-3">
-                                <div class="form-group">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>จัดการตารางแข่งขัน</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom CSS */
+        .add-btn-group {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-                                    <label for="f-name">ชื่อทีม</label>
-                                    <input type="text" class="form-control" id="f-name" name="name"
-                                        placeholder="First name">
-                                </div>
-                            </div>
+        .add-btn-group .btn {
+            margin-top: 10px;
+        }
+    </style>
+</head>
 
-                            <div class="col-md-5">
-                                <div class="form-group">
-                                    <label for="l-name">สังกัดสาขา</label>
-                                    <select id="l-name" name="lastname" class="form-control">
-                                        <option value="" disabled selected>เลือกสาขา</option>
-                                        <option value="วิทยาการคอมพิวเตอร์">วิทยาการคอมพิวเตอร์</option>
-                                        <option value="สัตวศาสตร์">สัตวศาสตร์</option>
-                                        <!-- Add more options as needed -->
-                                    </select>
-                                </div>
-                            </div>
+<body>
+    <div class="container mt-5">
+        <h3 class="text text-center py-2">ใบสมัครเข้าร่วมการแข่งขัน </h3>
+        <h3 class="text text-center py-2"> ฟุตบอลคณะเกษตรศาสตร์และเทคโนโลยีต้านภัยยาเสพติด </h3>
+        <h3 class="text text-center py-2">ครั้งที่ 17 “17th Agri-Tech CUP Anti Drugs” </h3>
 
-
-                            <div class="col-md-3">
-                                <div class="form-group">
-                                    <label for="phone">ประเภท</label>
-                                    <select id="phone" name="phone" class="form-control">
-                                        <option value="" disabled selected>เลือกประเภท</option>
-                                        <option value="...............">ชาย</option>
-                                        <option value="...............">หญิง</option>
-                                        <!-- Add more options as needed -->
-                                    </select>
-                                </div>
-                            </div>
-                            <table class="col-md-12 text-dark">
-                                <thead>
-                                    <tr>
-                                        <th>ลำดับที่</th>
+        <form id="scheduleForm" method="POST" action="save_schedule.php">
+            <div class="table-responsive">
+                <div class="row">
+                    <div class="col-xs-12 col-md-3">
+                        <div class="form-group">
+                            <label for="f-name">ชื่อทีม</label>
+                            <input type="text" class="form-control" id="f-name" name="name" placeholder="First name">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-5">
+                        <div class="form-group">
+                            <label for="l-name">สังกัดสาขา</label>
+                            <select id="l-name" name="lastname" class="form-control">
+                                <option value="" disabled selected>เลือกสาขา</option>
+                                <option value="วิทยาการคอมพิวเตอร์">วิทยาการคอมพิวเตอร์</option>
+                                <option value="สัตวศาสตร์">สัตวศาสตร์</option>
+                                <!-- Add more options as needed -->
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-4">
+                        <div class="form-group">
+                            <label for="phone">ประเภท</label>
+                            <select id="phone" name="phone" class="form-control">
+                                <option value="" disabled selected>เลือกประเภท</option>
+                                <option value="ชาย">ชาย</option>
+                                <option value="หญิง">หญิง</option>
+                                <!-- Add more options as needed -->
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>ลำดับ</th>
                                         <th>คำนำหน้า</th>
                                         <th>ชื่อ-นามสกุล</th>
                                         <th>รหัสนักศึกษา</th>
+                                        <th>เบอร์เสื้อ</th>
                                         <th>รูปภาพผู้เล่น</th>
                                         <th>หลักฐานยืนยันการเป็นนักศึกษา</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>
-                                            <select id="l-name" name="lastname" class="form-control">
-                                                <option value="" disabled selected>คำนำหน้า</option>
-                                                <option value="เด็กชาย">เด็กชาย</option>
-                                                <option value="เด็กหญิง">เด็กหญิง</option>
-                                                <option value="นาย">นาย</option>
-                                                <option value="นาง">นาง</option>
-                                                <option value="นางสาว">นางสาว</option>
-                                                <!-- Add more options as needed -->
-                                            </select>
-                                        </div>
-                                    </div></td>
-                                        <td><input type="text" name="name1" class="form-control"placeholder="Enter name"></td>
-                                        <td><input type="text" name="code1" class="form-control"placeholder="Enter code"></td>
-                                        <td><input type="file" name="image1" class="form-control-file"></td>
-                                        <td><input type="file" name="imagee1" class="form-control-file"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>
-                                            <select id="l-name" name="lastname" class="form-control">
-                                                <option value="" disabled selected>คำนำหน้า</option>
-                                                <option value="เด็กชาย">เด็กชาย</option>
-                                                <option value="เด็กหญิง">เด็กหญิง</option>
-                                                <option value="นาย">นาย</option>
-                                                <option value="นาง">นาง</option>
-                                                <option value="นางสาว">นางสาว</option>
-                                                <!-- Add more options as needed -->
-                                            </select>
-                                        </div>
-                                    </div></td>
-                                        <td><input type="text" name="name2" class="form-control"
-                                                placeholder="Enter name"></td>
-                                        <td><input type="text" name="code2" class="form-control"
-                                                placeholder="Enter code"></td>
-                                        <td><input type="file" name="image2" class="form-control-file"></td>
-                                        <td><input type="file" name="imagee2" class="form-control-file"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>
-                                            <select id="l-name" name="lastname" class="form-control">
-                                                <option value="" disabled selected>คำนำหน้า</option>
-                                                <option value="เด็กชาย">เด็กชาย</option>
-                                                <option value="เด็กหญิง">เด็กหญิง</option>
-                                                <option value="นาย">นาย</option>
-                                                <option value="นาง">นาง</option>
-                                                <option value="นางสาว">นางสาว</option>
-                                                <!-- Add more options as needed -->
-                                            </select>
-                                        </div>
-                                    </div></td>
-                                        <td><input type="text" name="name3" class="form-control"
-                                                placeholder="Enter name"></td>
-                                        <td><input type="text" name="code3" class="form-control"
-                                                placeholder="Enter code"></td>
-                                        <td><input type="file" name="image3" class="form-control-file"></td>
-                                        <td><input type="file" name="imagee3" class="form-control-file"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>4</td>
-                                        <td>
-                                            <select id="l-name" name="lastname" class="form-control">
-                                                <option value="" disabled selected>คำนำหน้า</option>
-                                                <option value="เด็กชาย">เด็กชาย</option>
-                                                <option value="เด็กหญิง">เด็กหญิง</option>
-                                                <option value="นาย">นาย</option>
-                                                <option value="นาง">นาง</option>
-                                                <option value="นางสาว">นางสาว</option>
-                                                <!-- Add more options as needed -->
-                                            </select>
-                                        </div>
-                                    </div></td>
-                                        <td><input type="text" name="name4" class="form-control"
-                                                placeholder="Enter name"></td>
-                                        <td><input type="text" name="code4" class="form-control"
-                                                placeholder="Enter code"></td>
-                                        <td><input type="file" name="image4" class="form-control-file"></td>
-                                        <td><input type="file" name="imagee4" class="form-control-file"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>5</td>
-                                        <td>
-                                            <select id="l-name" name="lastname" class="form-control">
-                                                <option value="" disabled selected>คำนำหน้า</option>
-                                                <option value="เด็กชาย">เด็กชาย</option>
-                                                <option value="เด็กหญิง">เด็กหญิง</option>
-                                                <option value="นาย">นาย</option>
-                                                <option value="นาง">นาง</option>
-                                                <option value="นางสาว">นางสาว</option>
-                                                <!-- Add more options as needed -->
-                                            </select>
-                                        </div>
-                                    </div></td>
-                                        <td><input type="text" name="name5" class="form-control"
-                                                placeholder="Enter name"></td>
-                                        <td><input type="text" name="code5" class="form-control"
-                                                placeholder="Enter code"></td>
-                                        <td><input type="file" name="image5" class="form-control-file"></td>
-                                        <td><input type="file" name="imagee5" class="form-control-file"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>6</td>
-                                        <td>
-                                            <select id="l-name" name="lastname" class="form-control">
-                                                <option value="" disabled selected>คำนำหน้า</option>
-                                                <option value="เด็กชาย">เด็กชาย</option>
-                                                <option value="เด็กหญิง">เด็กหญิง</option>
-                                                <option value="นาย">นาย</option>
-                                                <option value="นาง">นาง</option>
-                                                <option value="นางสาว">นางสาว</option>
-                                                <!-- Add more options as needed -->
-                                            </select>
-                                        </div>
-                                    </div></td>
-                                        <td><input type="text" name="name6" class="form-control"
-                                                placeholder="Enter name"></td>
-                                        <td><input type="text" name="code6" class="form-control"
-                                                placeholder="Enter code"></td>
-                                        <td><input type="file" name="image6" class="form-control-file"></td>
-                                        <td><input type="file" name="imagee6" class="form-control-file"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>7</td>
-                                        <td>
-                                            <select id="l-name" name="lastname" class="form-control">
-                                                <option value="" disabled selected>คำนำหน้า</option>
-                                                <option value="เด็กชาย">เด็กชาย</option>
-                                                <option value="เด็กหญิง">เด็กหญิง</option>
-                                                <option value="นาย">นาย</option>
-                                                <option value="นาง">นาง</option>
-                                                <option value="นางสาว">นางสาว</option>
-                                                <!-- Add more options as needed -->
-                                            </select>
-                                        </div>
-                                    </div></td>
-                                        <td><input type="text" name="name7" class="form-control"
-                                                placeholder="Enter name"></td>
-                                        <td><input type="text" name="code7" class="form-control"
-                                                placeholder="Enter code"></td>
-                                        <td><input type="file" name="image7" class="form-control-file"></td>
-                                        <td><input type="file" name="imagee7" class="form-control-file"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>8</td>
-                                        <td>
-                                            <select id="l-name" name="lastname" class="form-control">
-                                                <option value="" disabled selected>คำนำหน้า</option>
-                                                <option value="เด็กชาย">เด็กชาย</option>
-                                                <option value="เด็กหญิง">เด็กหญิง</option>
-                                                <option value="นาย">นาย</option>
-                                                <option value="นาง">นาง</option>
-                                                <option value="นางสาว">นางสาว</option>
-                                                <!-- Add more options as needed -->
-                                            </select>
-                                        </div>
-                                    </div></td>
-                                        <td><input type="text" name="name8" class="form-control"
-                                                placeholder="Enter name"></td>
-                                        <td><input type="text" name="code8" class="form-control"
-                                                placeholder="Enter code"></td>
-                                        <td><input type="file" name="image8" class="form-control-file"></td>
-                                        <td><input type="file" name="imagee8" class="form-control-file"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>9</td>
-                                        <td>
-                                            <select id="l-name" name="lastname" class="form-control">
-                                                <option value="" disabled selected>คำนำหน้า</option>
-                                                <option value="เด็กชาย">เด็กชาย</option>
-                                                <option value="เด็กหญิง">เด็กหญิง</option>
-                                                <option value="นาย">นาย</option>
-                                                <option value="นาง">นาง</option>
-                                                <option value="นางสาว">นางสาว</option>
-                                                <!-- Add more options as needed -->
-                                            </select>
-                                        </div>
-                                    </div></td>
-                                        <td><input type="text" name="name9" class="form-control"
-                                                placeholder="Enter name"></td>
-                                        <td><input type="text" name="code9" class="form-control"
-                                                placeholder="Enter code"></td>
-                                        <td><input type="file" name="image9" class="form-control-file"></td>
-                                        <td><input type="file" name="imagee9" class="form-control-file"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>10</td>
-                                        <td>
-                                            <select id="l-name" name="lastname" class="form-control">
-                                                <option value="" disabled selected>คำนำหน้า</option>
-                                                <option value="เด็กชาย">เด็กชาย</option>
-                                                <option value="เด็กหญิง">เด็กหญิง</option>
-                                                <option value="นาย">นาย</option>
-                                                <option value="นาง">นาง</option>
-                                                <option value="นางสาว">นางสาว</option>
-                                                <!-- Add more options as needed -->
-                                            </select>
-                                        </div>
-                                    </div></td>
-                                        <td><input type="text" name="name10" class="form-control"
-                                                placeholder="Enter name"></td>
-                                        <td><input type="text" name="code10" class="form-control"
-                                                placeholder="Enter code"></td>
-                                        <td><input type="file" name="image10" class="form-control-file"></td>
-                                        <td><input type="file" name="imagee10" class="form-control-file"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>11</td>
-                                        <td>
-                                            <select id="l-name" name="lastname" class="form-control">
-                                                <option value="" disabled selected>คำนำหน้า</option>
-                                                <option value="เด็กชาย">เด็กชาย</option>
-                                                <option value="เด็กหญิง">เด็กหญิง</option>
-                                                <option value="นาย">นาย</option>
-                                                <option value="นาง">นาง</option>
-                                                <option value="นางสาว">นางสาว</option>
-                                                <!-- Add more options as needed -->
-                                            </select>
-                                        </div>
-                                    </div></td>
-                                        <td><input type="text" name="name11" class="form-control"
-                                                placeholder="Enter name"></td>
-                                        <td><input type="text" name="code11" class="form-control"
-                                                placeholder="Enter code"></td>
-                                        <td><input type="file" name="image11" class="form-control-file"></td>
-                                        <td><input type="file" name="imagee11" class="form-control-file"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>12</td>
-                                        <td>
-                                            <select id="l-name" name="lastname" class="form-control">
-                                                <option value="" disabled selected>คำนำหน้า</option>
-                                                <option value="เด็กชาย">เด็กชาย</option>
-                                                <option value="เด็กหญิง">เด็กหญิง</option>
-                                                <option value="นาย">นาย</option>
-                                                <option value="นาง">นาง</option>
-                                                <option value="นางสาว">นางสาว</option>
-                                                <!-- Add more options as needed -->
-                                            </select>
-                                        </div>
-                                    </div></td>
-                                        <td><input type="text" name="name12" class="form-control"
-                                                placeholder="Enter name"></td>
-                                        <td><input type="text" name="code12" class="form-control"
-                                                placeholder="Enter code"></td>
-                                        <td><input type="file" name="image12" class="form-control-file"></td>
-                                        <td><input type="file" name="imagee12" class="form-control-file"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>13</td>
-                                        <td>
-                                            <select id="l-name" name="lastname" class="form-control">
-                                                <option value="" disabled selected>คำนำหน้า</option>
-                                                <option value="เด็กชาย">เด็กชาย</option>
-                                                <option value="เด็กหญิง">เด็กหญิง</option>
-                                                <option value="นาย">นาย</option>
-                                                <option value="นาง">นาง</option>
-                                                <option value="นางสาว">นางสาว</option>
-                                                <!-- Add more options as needed -->
-                                            </select>
-                                        </div>
-                                    </div></td>
-                                        <td><input type="text" name="name13" class="form-control"
-                                                placeholder="Enter name"></td>
-                                        <td><input type="text" name="code13" class="form-control"
-                                                placeholder="Enter code"></td>
-                                        <td><input type="file" name="image13" class="form-control-file"></td>
-                                        <td><input type="file" name="imagee13" class="form-control-file"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>14</td>
-                                        <td>
-                                            <select id="l-name" name="lastname" class="form-control">
-                                                <option value="" disabled selected>คำนำหน้า</option>
-                                                <option value="เด็กชาย">เด็กชาย</option>
-                                                <option value="เด็กหญิง">เด็กหญิง</option>
-                                                <option value="นาย">นาย</option>
-                                                <option value="นาง">นาง</option>
-                                                <option value="นางสาว">นางสาว</option>
-                                                <!-- Add more options as needed -->
-                                            </select>
-                                        </div>
-                                    </div></td>
-                                        <td><input type="text" name="name14" class="form-control"
-                                                placeholder="Enter name"></td>
-                                        <td><input type="text" name="code14" class="form-control"
-                                                placeholder="Enter code"></td>
-                                        <td><input type="file" name="image14" class="form-control-file"></td>
-                                        <td><input type="file" name="imagee14" class="form-control-file"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>15</td>
-                                        <td>
-                                            <select id="l-name" name="lastname" class="form-control">
-                                                <option value="" disabled selected>คำนำหน้า</option>
-                                                <option value="เด็กชาย">เด็กชาย</option>
-                                                <option value="เด็กหญิง">เด็กหญิง</option>
-                                                <option value="นาย">นาย</option>
-                                                <option value="นาง">นาง</option>
-                                                <option value="นางสาว">นางสาว</option>
-                                                <!-- Add more options as needed -->
-                                            </select>
-                                        </div>
-                                    </div></td>
-                                        <td><input type="text" name="name15" class="form-control"
-                                                placeholder="Enter name"></td>
-                                        <td><input type="text" name="code15" class="form-control"
-                                                placeholder="Enter code"></td>
-                                        <td><input type="file" name="image15" class="form-control-file"></td>
-                                        <td><input type="file" name="imagee15" class="form-control-file"></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                                        <th>การดำเนินการ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- แถวตัวอย่าง -->
+                        <tr>
+                            <td class="text-center">1</td>
+                            <td>
+                                <select id="l-name" name="lastname" class="form-control">
+                                    <option value="" disabled selected>คำนำหน้า</option>
+                                    <option value="นาย">นาย</option>
+                                    <option value="นาง">นาง</option>
+                                    <option value="นางสาว">นางสาว</option>
+                                    <!-- Add more options as needed -->
+                                </select>
+                            </td>
+                            <td><input type="text" name="name1"class="form-control"placeholder="ชื่อ-นามสกุล"></td>
+                            <td><input type="text" name="code1"class="form-control"placeholder="รหัส-นักศึกษา"></td>
+                            <td><input type="text" name="codenumber"class="form-control"placeholder="เบอร์เสื้อ"></td>
+                            <td><input type="file" name="image1" class="form-control-file"></td>
+                            <td><input type="file" name="imagee1" class="form-control-file"></td>
 
-                            {{-- <div class="col-md-3">
-                                <label for="f-name">หัวหน้าสาขา</label>
-                                <input type="text" class="form-control" id="f-name" name="name"placeholder="ชื่อ">
-                                <input type="text" class="form-control" id="phone" name="phone"
-                                    placeholder="Phone number">
-                            </div>
-                            <div class="col-md-3">
-                                <label for="f-name">อาจารย์ที่ปรึกษา</label>
-                                <input type="text" class="form-control" id="f-name" name="name"placeholder="ชื่อ">
-                                <input type="text" class="form-control" id="phone" name="phone"
-                                    placeholder="Phone number">
-                            </div>
+                            <td class="text-center">
+                                <button type="button" class="btn btn-warning edit-btn">แก้ไข</button>
+                                <button type="button" class="btn btn-danger delete-btn">ลบ</button>
+                                <button type="button" class="btn btn-primary save-btn"
+                                    style="display: none;">บันทึก</button>
+                            </td>
 
-                            <div class="col-md-3">
-                                <label for="f-name">ผู้จัดการทีม/หัวหน้าทีม</label>
-                                <input type="text" class="form-control" id="f-name"
-                                    name="name"placeholder="ชื่อ">
-                                <input type="text" class="form-control" id="phone" name="phone"
-                                    placeholder="Phone number">
-                            </div> --}}
+                        </tr>
+                        <tr>
+                            <td class="text-center">2</td>
+                            <td>
+                                <select id="l-name" name="lastname" class="form-control">
+                                    <option value="" disabled selected>คำนำหน้า</option>
+                                    <option value="เด็กชาย">เด็กชาย</option>
+                                    <option value="เด็กหญิง">เด็กหญิง</option>
+                                    <option value="นาย">นาย</option>
+                                    <option value="นาง">นาง</option>
+                                    <option value="นางสาว">นางสาว</option>
+                                    <!-- Add more options as needed -->
+                                </select>
+                            </td>
+                            <td><input type="text" name="name1"class="form-control"placeholder="ชื่อ-นามสกุล"></td>
+                            <td><input type="text" name="code1"class="form-control"placeholder="รหัส-นักศึกษา"></td>
+                            <td><input type="text" name="codenumber"class="form-control"placeholder="เบอร์เสื้อ"></td>
+                            <td><input type="file" name="image1" class="form-control-file"></td>
+                            <td><input type="file" name="imagee1" class="form-control-file"></td>
 
+                            <td class="text-center">
+                                <button type="button" class="btn btn-warning edit-btn">แก้ไข</button>
+                                <button type="button" class="btn btn-danger delete-btn">ลบ</button>
+                                <button type="button" class="btn btn-primary save-btn"
+                                    style="display: none;">บันทึก</button>
+                            </td>
 
-                            <div class="row-md-12">
-                                <button class="btn btn-primary" type="submit">Submit</button>
-                            </div>
+                        </tr>
+                        <tr>
+                            <td class="text-center">3</td>
+                            <td>
+                                <select id="l-name" name="lastname" class="form-control">
+                                    <option value="" disabled selected>คำนำหน้า</option>
+                                    <option value="เด็กชาย">เด็กชาย</option>
+                                    <option value="เด็กหญิง">เด็กหญิง</option>
+                                    <option value="นาย">นาย</option>
+                                    <option value="นาง">นาง</option>
+                                    <option value="นางสาว">นางสาว</option>
+                                    <!-- Add more options as needed -->
+                                </select>
+                            </td>
+                            <td><input type="text" name="name1"class="form-control"placeholder="ชื่อ-นามสกุล"></td>
+                            <td><input type="text" name="code1"class="form-control"placeholder="รหัส-นักศึกษา"></td>
+                            <td><input type="text" name="codenumber"class="form-control"placeholder="เบอร์เสื้อ"></td>
+                            <td><input type="file" name="image1" class="form-control-file"></td>
+                            <td><input type="file" name="imagee1" class="form-control-file"></td>
 
-                            <div class="row-md-12">
-                                <button class="btn btn-primary" type="cancel">cancel</button>
-                            </div>
-                        </form>
+                            <td class="text-center">
+                                <button type="button" class="btn btn-warning edit-btn">แก้ไข</button>
+                                <button type="button" class="btn btn-danger delete-btn">ลบ</button>
+                                <button type="button" class="btn btn-primary save-btn"
+                                    style="display: none;">บันทึก</button>
+                            </td>
 
-                    </div>
-                </div>
+                        </tr>
+                        <tr>
+                            <td class="text-center">4</td>
+                            <td>
+                                <select id="l-name" name="lastname" class="form-control">
+                                    <option value="" disabled selected>คำนำหน้า</option>
+                                    <option value="เด็กชาย">เด็กชาย</option>
+                                    <option value="เด็กหญิง">เด็กหญิง</option>
+                                    <option value="นาย">นาย</option>
+                                    <option value="นาง">นาง</option>
+                                    <option value="นางสาว">นางสาว</option>
+                                    <!-- Add more options as needed -->
+                                </select>
+                            </td>
+                            <td><input type="text" name="name1"class="form-control"placeholder="ชื่อ-นามสกุล"></td>
+                            <td><input type="text" name="code1"class="form-control"placeholder="รหัส-นักศึกษา"></td>
+                            <td><input type="text" name="codenumber"class="form-control"placeholder="เบอร์เสื้อ"></td>
+                            <td><input type="file" name="image1" class="form-control-file"></td>
+                            <td><input type="file" name="imagee1" class="form-control-file"></td>
+
+                            <td class="text-center">
+                                <button type="button" class="btn btn-warning edit-btn">แก้ไข</button>
+                                <button type="button" class="btn btn-danger delete-btn">ลบ</button>
+                                <button type="button" class="btn btn-primary save-btn"
+                                    style="display: none;">บันทึก</button>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td class="text-center">5</td>
+                            <td>
+                                <select id="l-name" name="lastname" class="form-control">
+                                    <option value="" disabled selected>คำนำหน้า</option>
+                                    <option value="เด็กชาย">เด็กชาย</option>
+                                    <option value="เด็กหญิง">เด็กหญิง</option>
+                                    <option value="นาย">นาย</option>
+                                    <option value="นาง">นาง</option>
+                                    <option value="นางสาว">นางสาว</option>
+                                    <!-- Add more options as needed -->
+                                </select>
+                            </td>
+                            <td><input type="text" name="name1"class="form-control"placeholder="ชื่อ-นามสกุล"></td>
+                            <td><input type="text" name="code1"class="form-control"placeholder="รหัส-นักศึกษา"></td>
+                            <td><input type="text" name="codenumber"class="form-control"placeholder="เบอร์เสื้อ"></td>
+                            <td><input type="file" name="image1" class="form-control-file"></td>
+                            <td><input type="file" name="imagee1" class="form-control-file"></td>
+
+                            <td class="text-center">
+                                <button type="button" class="btn btn-warning edit-btn">แก้ไข</button>
+                                <button type="button" class="btn btn-danger delete-btn">ลบ</button>
+                                <button type="button" class="btn btn-primary save-btn"
+                                    style="display: none;">บันทึก</button>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td class="text-center">6</td>
+                            <td>
+                                <select id="l-name" name="lastname" class="form-control">
+                                    <option value="" disabled selected>คำนำหน้า</option>
+                                    <option value="เด็กชาย">เด็กชาย</option>
+                                    <option value="เด็กหญิง">เด็กหญิง</option>
+                                    <option value="นาย">นาย</option>
+                                    <option value="นาง">นาง</option>
+                                    <option value="นางสาว">นางสาว</option>
+                                    <!-- Add more options as needed -->
+                                </select>
+                            </td>
+                            <td><input type="text" name="name1"class="form-control"placeholder="ชื่อ-นามสกุล"></td>
+                            <td><input type="text" name="code1"class="form-control"placeholder="รหัส-นักศึกษา"></td>
+                            <td><input type="text" name="codenumber"class="form-control"placeholder="เบอร์เสื้อ"></td>
+                            <td><input type="file" name="image1" class="form-control-file"></td>
+                            <td><input type="file" name="imagee1" class="form-control-file"></td>
+
+                            <td class="text-center">
+                                <button type="button" class="btn btn-warning edit-btn">แก้ไข</button>
+                                <button type="button" class="btn btn-danger delete-btn">ลบ</button>
+                                <button type="button" class="btn btn-primary save-btn"
+                                    style="display: none;">บันทึก</button>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td class="text-center">7</td>
+                            <td>
+                                <select id="l-name" name="lastname" class="form-control">
+                                    <option value="" disabled selected>คำนำหน้า</option>
+                                    <option value="เด็กชาย">เด็กชาย</option>
+                                    <option value="เด็กหญิง">เด็กหญิง</option>
+                                    <option value="นาย">นาย</option>
+                                    <option value="นาง">นาง</option>
+                                    <option value="นางสาว">นางสาว</option>
+                                    <!-- Add more options as needed -->
+                                </select>
+                            </td>
+                            <td><input type="text" name="name1"class="form-control"placeholder="ชื่อ-นามสกุล"></td>
+                            <td><input type="text" name="code1"class="form-control"placeholder="รหัส-นักศึกษา"></td>
+                            <td><input type="text" name="codenumber"class="form-control"placeholder="เบอร์เสื้อ"></td>
+                            <td><input type="file" name="image1" class="form-control-file"></td>
+                            <td><input type="file" name="imagee1" class="form-control-file"></td>
+
+                            <td class="text-center col-mt-6">
+                                <button type="button" class="btn btn-warning edit-btn">แก้ไข</button>
+                                <button type="button" class="btn btn-danger delete-btn">ลบ</button>
+                                <button type="button" class="btn btn-primary save-btn"
+                                    style="display: none;">บันทึก</button>
+                            </td>
+                        </tr>
+                        <!-- เพิ่มแถวตารางแข่งขันตามต้องการ -->
+                    </tbody>
+                </table>
             </div>
+            <div class="text-center mt-4">
+                <button type="button" class="btn btn-success add-row-btn">เพิ่มแถว</button>
+                <button type="submit" class="btn btn-primary">บันทึกตารางแข่งขัน</button>
+            </div>
+        </form>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const editButtons = document.querySelectorAll('.edit-btn');
+        const deleteButtons = document.querySelectorAll('.delete-btn');
+        const saveButtons = document.querySelectorAll('.save-btn');
+        const addRowButton = document.querySelector('.add-row-btn');
 
-        </div>
-    </section>
-</div>
+        // Function to handle edit button click
+        editButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                const row = button.closest('tr');
+                const selectElements = row.querySelectorAll('select, input[type="text"], input[type="file"]');
+                selectElements.forEach((select) => {
+                    select.removeAttribute('disabled');
+                });
+                button.style.display = 'none';
+                row.querySelector('.save-btn').style.display = 'inline-block';
+            });
+        });
+
+        // Function to handle save button click
+        saveButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                const row = button.closest('tr');
+                const selectElements = row.querySelectorAll('select, input[type="text"], input[type="file"]');
+                selectElements.forEach((select) => {
+                    select.setAttribute
+                    ('disabled', 'disabled');
+                 });
+                 button.style.display = 'none';
+                 row.querySelector('.edit-btn').style.display = 'inline-block';
+             });
+         });
+
+         // Function to handle delete button click
+         deleteButtons.forEach((button) => {
+             button.addEventListener('click', () => {
+                 const confirmation = confirm("คุณแน่ใจหรือไม่ว่าต้องการลบแถวนี้?");
+                 if (confirmation) {
+                     const row = button.closest('tr');
+                     row.remove();
+                     updateRowNumbers(); // Update row numbers after deletion
+                 }
+             });
+         });
+
+         // Function to handle add row button click
+         addRowButton.addEventListener('click', () => {
+             const tableBody = document.querySelector('tbody');
+             const newRow = document.createElement('tr');
+             newRow.innerHTML = `
+                 <td class="text-center">${tableBody.rows.length + 1}</td>
+                 <td>
+                     <select name="lastname${tableBody.rows.length + 1}" class="form-control">
+                         <option value="" disabled selected>คำนำหน้า</option>
+                         <option value="เด็กชาย">เด็กชาย</option>
+                         <option value="เด็กหญิง">เด็กหญิง</option>
+                         <option value="นาย">นาย</option>
+                         <option value="นาง">นาง</option>
+                         <option value="นางสาว">นางสาว</option>
+                     </select>
+                 </td>
+                 <td><input type="text" name="name${tableBody.rows.length + 1}" class="form-control" placeholder="ชื่อ-นามสกุล"></td>
+                 <td><input type="text" name="code${tableBody.rows.length + 1}" class="form-control" placeholder="รหัส-นักศึกษา"></td>
+                 <td><input type="text" name="codenumber${tableBody.rows.length + 1}" class="form-control" placeholder="เบอร์เสื้อ"></td>
+                 <td><input type="file" name="image${tableBody.rows.length + 1}" class="form-control-file"></td>
+                 <td><input type="file" name="imagee${tableBody.rows.length + 1}" class="form-control-file"></td>
+                 <td class="text-center">
+                     <button type="button" class="btn btn-warning edit-btn">แก้ไข</button>
+                     <button type="button" class="btn btn-danger delete-btn">ลบ</button>
+                     <button type="button" class="btn btn-primary save-btn" style="display: none;">บันทึก</button>
+                 </td>
+             `;
+             tableBody.appendChild(newRow);
+
+             const editButton = newRow.querySelector('.edit-btn');
+             const deleteButton = newRow.querySelector('.delete-btn');
+             const saveButton = newRow.querySelector('.save-btn');
+
+             // Function to handle edit button click for new row
+             editButton.addEventListener('click', () => {
+                 const selectElements = newRow.querySelectorAll('select, input[type="text"], input[type="file"]');
+                 selectElements.forEach((select) => {
+                     select.removeAttribute('disabled');
+                 });
+                 editButton.style.display = 'none';
+                 newRow.querySelector('.save-btn').style.display = 'inline-block';
+             });
+
+             // Function to handle save button click for new row
+             saveButton.addEventListener('click', () => {
+                 const selectElements = newRow.querySelectorAll('select, input[type="text"], input[type="file"]');
+                 selectElements.forEach((select) => {
+                     select.setAttribute('disabled', 'disabled');
+                 });
+                 saveButton.style.display = 'none';
+                 newRow.querySelector('.edit-btn').style.display = 'inline-block';
+             });
+
+             // Function to handle delete button click for new row
+             deleteButton.addEventListener('click', () => {
+                 const confirmation = confirm("คุณแน่ใจหรือไม่ว่าต้องการลบ");
+                 if (confirmation) {
+                     newRow.remove();
+                     updateRowNumbers(); // Update row numbers after deletion
+                 }
+             });
+         });
+
+         // Function to update row numbers after deletion
+         function updateRowNumbers() {
+             const rows = document.querySelectorAll('tbody tr');
+             rows.forEach((row, index) => {
+                 row.querySelector('td.text-center').textContent = index + 1;
+             });
+         }
+     });
+ </script>
+</body>
+</html>
