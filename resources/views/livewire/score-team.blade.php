@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ตารางการแข่งขัน</title>
+    <title>ผลการแข่งขัน</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         .table-wrapper {
@@ -38,7 +37,7 @@
 <body>
 
     <div class="container">
-        <h3 class="text-center py-2">ตารางการแข่งขัน</h3>
+        <h3 class="text-center py-2">ผลการแข่งขัน</h3>
 
         <div class="table-wrapper">
             <table class="table table-striped table-hover score-table">
@@ -50,7 +49,7 @@
                     <tr>
                         <th>เวลา</th>
                         <th>สนาม</th>
-                        <th>ทีม </th>
+                        <th>ทีม</th>
                         <th>พบกับ</th>
                         <th>ทีม</th>
                     </tr>
@@ -62,43 +61,43 @@
                         <td>16:30</td>
                         <td>1</td>
                         <td>A1</td>
-                        <td>พบกับ</td>
+                        <td>1-0</td>
                         <td>A2</td>
                     </tr>
                     <!-- Random matches -->
                     <tr>
                         <td>16:35</td>
                         <td>1</td>
-                        <td> A3</td>
-                        <td>พบกับ</td>
+                        <td>A3</td>
+                        <td>3-0</td>
                         <td>A4</td>
                     </tr>
                     <tr>
                         <td>16:40</td>
                         <td>1</td>
                         <td>A5</td>
-                        <td>พบกับ</td>
+                        <td>2-2</td>
                         <td>A6</td>
                     </tr>
                     <tr>
                         <td>16:45</td>
                         <td>1</td>
                         <td>A7</td>
-                        <td>พบกับ</td>
+                        <td>1-1</td>
                         <td>A8</td>
                     </tr>
                     <tr>
                         <td>16:50</td>
                         <td>1</td>
                         <td>A9</td>
-                        <td>พบกับ</td>
+                        <td>2-0</td>
                         <td>A10</td>
                     </tr>
                     <tr>
                         <td>16:55</td>
                         <td>1</td>
                         <td>A11</td>
-                        <td>พบกับ</td>
+                        <td>2-2</td>
                         <td>A12</td>
                     </tr>
                 </tbody>

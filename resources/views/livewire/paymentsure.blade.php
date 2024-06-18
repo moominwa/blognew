@@ -1,91 +1,134 @@
-<div class="row">
-    <div class="col-md-12 ">
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Slip Verification</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        .upload-container {
+            display: flex;
+            align-items: center;
+        }
 
+        .upload-success {
+            color: #28a745;
+            margin-left: 10px;
+            display: none;
+        }
 
-        <section class="login-block">
-            <!-- Container-fluid starts -->
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <!-- Authentication card start -->
-                        <form action="https://payment.surin.rmuti.ac.th/2023/member/login/check"
-                            class="md-float-material form-material" method="POST">
+        .form-control.is-valid, .was-validated .form-control:valid {
+            border-color: #28a745;
+            padding-right: calc(1.5em + .75rem);
+            background-image: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e);
+            background-repeat: no-repeat;
+            background-position: center right calc(.375em + .1875rem);
+            background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+        }
 
-                            <input type="hidden" name="_token" value="xG80F8NNeUb5dLzhSAjFzblNLaQwpGURanfcLDLY">
+        .submit-button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
 
-                            <div class="auth-box card">
-                                <div class="card-block">
-                                    <div class="row  ">
-                                        <div class="col-md-12">
-                                            <h3 class="text-center txt-primary">บัญชีแจ้งชำระ</h3>
-                                        </div>
-                                    </div>
+        .submit-button:disabled {
+            background-color: #d3d3d3;
+            cursor: not-allowed;
+        }
 
-                                    <div class="row  ">
-                                        <div class="col-md-12">
-                                            <p class="text-inverse ">
-                                                Agri- Tech cup<br>
-                                                กรุงไทย เลขที่บัญชี 999-9999-999
-                                            </p>
-                                            <hr>
+        .card-header {
+            background-color: #6caceb;
+            border-bottom: 1px solid #e3e6f0;
+            color: white;
+        }
 
-                                            <img class="img-fluid px-5"
-                                                src="data:image/png;base64,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">
+        .card-body p {
+            margin-bottom: 0.5rem;
+            text-align: center;
+                    }
+    </style>
+</head>
 
-                                        </div>
-                                    </div>
-
-
-                                </div>
-                            </div>
-
-                            <div class="auth-box card">
-                                <div class="card-block">
-                                    <div class="row  ">
-                                        <div class="col-md-12">
-                                            <h3 class="text-center txt-primary">ติดต่อเจ้าหน้าที่</h3>
-                                        </div>
-                                    </div>
-                                    <div class="row  ">
-                                        <div class="col-md-12">
-
-
-
-                                            <p class="text-inverse text-left"> 4
-                                                <b>หัวหน้าแผนกการเงิน (นายวีรพล จันทร์สว่าง) Tel. 999999 <br>
-
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                        </form>
-                        <!-- end of form -->
-                    </div>
-                    <!-- Authentication card end -->
-                </div>
-                <!-- end of col-sm-12 -->
+<body>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header text-center">
+                <h2 class="css-1509b">Slip Verification</h2>
+                <p class="css-1509b">แจ้งชำระด้วยธนาคาร (สลิป)</p>
             </div>
-            <!-- end of row -->
-        </section>
+
+            <div class="card-body">
+                <div class="css-15dv7dt">
+                    <div class="css-165casq">
+                        <p class="css-3nmobs">ธนาคารกสิกรไทย (KBANK)</p>
+                        <p class="css-usiivr">999-9999-999-9</p>
+                    </div>
+                    <div class="css-165casq">
+                        <p class="css-3nmobs">ชื่อบัญชี</p>
+                        <p class="css-usiivr">วีระพล จันทร์สว่าง</p>
+                    </div>
+                    <p class="css-3nmobs">ใช้แอพธนาคารโอนเงินบัญชีดังกล่าว แล้วนำสลิปมาแนบที่ช่องด้านล่างเพื่อชำระเงิน</p>
+                </div>
+                <div class="row mt-4">
+                    <div class="form-group col-sm-12">
+                        <label for="payment_files">ไฟล์ภาพหลักฐาน (png, jpg, jpeg)</label>
+                        <div class="upload-container">
+                            <input class="form-control fill" id="payment_files" name="payment_files" type="file" accept="image/jpeg,image/png,image/jpg" aria-invalid="false">
+                            <span id="upload-success" class="upload-success"><i class="fas fa-check-circle"></i></span>
+                        </div>
+                        <canvas id="payment_decode_image" style="display: none;" width="480" height="585"></canvas>
+                        <input id="payment_bank_codefull" name="payment_bank_codefull" type="hidden" value="">
+                        <input id="payment_bank_code" name="payment_bank_code" type="hidden" value="">
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="form-group col-sm-12 text-center">
+                        <button id="submit-button" class="submit-button" disabled>ส่ง</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <!-- end of container-fluid -->
 
+    <script>
+        document.getElementById('payment_files').addEventListener('change', function(event) {
+            const fileInput = event.target;
+            const files = fileInput.files;
+            if (files.length > 0) {
+                const file = files[0];
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const img = new Image();
+                    img.onload = function() {
+                        const canvas = document.getElementById('payment_decode_image');
+                        const ctx = canvas.getContext('2d');
+                        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+                    };
+                    img.src = e.target.result;
+                    document.getElementById('upload-success').style.display = 'inline-block';
+                    document.getElementById('submit-button').disabled = false;
+                };
+                reader.readAsDataURL(file);
+            } else {
+                document.getElementById('upload-success').style.display = 'none';
+                document.getElementById('submit-button').disabled = true;
+            }
+        });
 
-</div>
+        document.getElementById('submit-button').addEventListener('click', function() {
+            if (confirm('คุณต้องการยืนยันการส่งหรือไม่?')) {
+                window.location.href = 'nextpage.html'; // Replace 'nextpage.html' with the desired URL
+            }
+        });
+    </script>
+</body>
+
+</html>

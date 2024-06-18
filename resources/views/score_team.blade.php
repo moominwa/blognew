@@ -1,4 +1,4 @@
 @extends('test')
 @section('content')
-@livewire('score-table')
+@livewire('score-team')
 @endsection

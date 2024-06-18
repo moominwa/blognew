@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>NewsBit - News Magazine Newspaper HTML Template</title>
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -74,25 +74,15 @@
                                     ตาราง
                                 </a>
                                 <div class="dropdown-menu text-dark" id="account">
-                                    <a class="dropdown-item" href="">ตารางแข่งขัน</a>
-                                    <a class="dropdown-item" href="">ผลการแข่งขัน</a>
-                                    <a class="dropdown-item" href="">คะแนน</a>
-                                    <a class="dropdown-item" href="">ดาวซัลโว</a>
+                                    <a class="dropdown-item" href="/score">ตารางแข่งขัน</a>
+                                    <a class="dropdown-item" href="/score_team">ผลการแข่งขัน</a>
+                                    <a class="dropdown-item" href="/score_table">คะแนน</a>
+                                    <a class="dropdown-item" href="/star_score">ดาวซัลโว</a>
+                                    <a class="dropdown-item" href="/team_information">ข้อมูลทีม</a>
                                 </div>
                             </li>
 
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle text-dark" href="#account" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    ข่าว
-                                </a>
-                                <div class="dropdown-menu text-dark" id="account">
-                                    <a class="dropdown-item" href="">ข่าวประชาสัมพันธ์</a>
-                                    <a class="dropdown-item" href="">ข่าวการแข่งขัน</a>
-                                    <a class="dropdown-item" href="">ข่าวทั่วไป</a>
-                                    <a class="dropdown-item" href="">ข่าวการรับสมัคร</a>
-                                </div>
-                            </li>
+
 
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle text-dark" href="#account" role="button"
@@ -100,7 +90,7 @@
                                     ตรวจสอบ
                                 </a>
                                 <div class="dropdown-menu text-dark" id="account">
-                                    <a class="dropdown-item" href="">รายชื่อทีมที่สมัคร</a>
+                                    <a class="dropdown-item" href="/player_information">รายชื่อทีมที่สมัคร</a>
                                     <a class="dropdown-item" href="">รายชื่อทีมที่ได้รับการอนุมัติ</a>
                                     <a class="dropdown-item" href="">รายชื่อทีมที่ชำระเงินแล้ว</a>
                                 </div>
